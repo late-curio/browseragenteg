@@ -7,6 +7,7 @@
 <body>
 <%
     String name=request.getParameter("name");
-    out.println("welcome " + name); %>
+    out.println("welcome " + name);
+%>
 </body>
 </html>

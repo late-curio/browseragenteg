@@ -23,3 +23,13 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+bootRun {
+	jvmArgs = [
+			"-javaagent:${System.getenv("NEW_RELIC_JAR")}",
+			"-Dnewrelic.config.file=${project.projectDir}/newrelic/newrelic.yml",
+			"-Dnewrelic.environment=staging",
+			"-Dnewrelic.logfile=${project.projectDir}/newrelic/newrelic.log",
+			"-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005"
+	]
+}

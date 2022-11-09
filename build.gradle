@@ -29,7 +29,7 @@ bootRun {
 			"-javaagent:${System.getenv("NEW_RELIC_JAR")}",
 			"-Dnewrelic.config.file=${project.projectDir}/newrelic/newrelic.yml",
 			"-Dnewrelic.environment=staging",
-			"-Dnewrelic.logfile=${project.projectDir}/newrelic/newrelic.log",
+			"-Dnewrelic.logfile=${project.projectDir}/newrelic/newrelic_agent.log",
 			"-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005"
 	]
 }

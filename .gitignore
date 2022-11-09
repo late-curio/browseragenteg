@@ -37,4 +37,4 @@ out/
 .vscode/
 
 ### New Relic ###
-newrelic/newrelic.log
+newrelic/*.log

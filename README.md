@@ -11,8 +11,6 @@ export NEW_RELIC_LICENSE_KEY=[YOUR_LICENSE_KEY]
 export NEW_RELIC_JAR='/some/where/newrelic.jar'
 ```
 
-Specify JDK 17 as your current JDK or change the `build.gradle` to allow different version.
-
 Then run the Spring Boot app:
 
 `./gradlew bootRun`

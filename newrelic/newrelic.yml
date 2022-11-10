@@ -123,7 +123,7 @@ common: &default_settings
     local_decorating:
 
       # When true, the agent will decorate your application log files with linking metadata. The default is false.
-      enabled: true
+      enabled: false
 
   # Proxy settings for connecting to the New Relic server:
   # If a proxy is used, the host setting is required.  Other settings
@@ -284,6 +284,7 @@ common: &default_settings
     # for instructions to add these manually to your pages.
     # Set this attribute to false to turn off this behavior.
     auto_instrument: true
+    disabled_auto_pages: /WEB-INF/jsp/manual.jsp, /WEB-INF/jsp/disable.jsp
 
   class_transformer:
     # This instrumentation reports the name of the user principal returned from

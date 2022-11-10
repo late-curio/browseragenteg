@@ -19,6 +19,8 @@ Hit the singular endpoint that forwards to the JSP:
 
 http://localhost:8080/hello?name=Bob
 
+View source on that web page, and you should see the browser agent injected.
+
 Navigate to https://staging-one.newrelic.com and find app under "Browser applications"
 
 You can also `tail -f newrelic/newrelic_agent.log` for more details on execution.

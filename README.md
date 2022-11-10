@@ -34,7 +34,7 @@ http://localhost:8080/auto?name=Bob
 
 `<script type="text/javascript">window.NREUM...`
 
-Should be added near bottom of HTML source.
+Should be a script in header and footer.
 
 ### Verify Browser Manual Injection
 

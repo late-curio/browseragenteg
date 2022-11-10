@@ -12,7 +12,7 @@ repositories {
 }
 
 dependencies {
-	implementation 'com.newrelic.agent.java:newrelic-api:7.11.0'
+	implementation files(System.getenv("NEW_RELIC_API"))
 	implementation 'javax.servlet:jstl'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
@@ -28,6 +28,7 @@ bootRun {
 	jvmArgs = [
 			"-javaagent:${System.getenv("NEW_RELIC_JAR")}",
 			"-Dnewrelic.config.file=${project.projectDir}/newrelic/newrelic.yml",
+			// comment out line below for prod
 			"-Dnewrelic.environment=staging",
 			"-Dnewrelic.logfile=${project.projectDir}/newrelic/newrelic_agent.log",
 			"-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005"

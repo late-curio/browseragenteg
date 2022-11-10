@@ -1,17 +1,21 @@
 Browser Agent Example
 =====================
 
-Use this on Java Agent Bug Hunt with new SNAPSHOT version of the jar file to ensure the browser agent is injected
-properly.
+Use this on Java Agent Bug Hunt with new SNAPSHOT version of the jar files to
+ensure the browser agent is injected properly.
 
 ### Setup
 You will need JDK8 or newer installed locally to run this.
 
-Please specify the following variables in your .zshrc or .bashrc:
+It also assumes you want to verify on Staging.  If that is not true, check
+`build.gradle` for instructions on how to point at production.
+
+Please specify the following variables in your .zshrc or .bashrc or manually in terminal:
 
 ```
 export NEW_RELIC_LICENSE_KEY=[YOUR_LICENSE_KEY]
-export NEW_RELIC_JAR='/some/where/newrelic.jar'
+export NEW_RELIC_JAR='/Users/me/newrelic-java-agent/newrelic-agent/build/newrelicJar/newrelic.jar'
+export NEW_RELIC_API='/Users/me/newrelic-java-agent/newrelic-api/build/libs/newrelic-api-#.##.#-SNAPSHOT.jar'
 ```
 
 ### Run
@@ -54,6 +58,6 @@ No `javascript` should be injected.
 
 ## Verify Data
 
-Navigate to https://staging-one.newrelic.com and find app under "Browser applications"
+Navigate to staging https://staging-one.newrelic.com and find app under "Browser applications"
 
 You can also `tail -f newrelic/newrelic_agent.log` for more details on execution.

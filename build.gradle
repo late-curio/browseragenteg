@@ -29,6 +29,7 @@ bootRun {
 			"-javaagent:${System.getenv("NEW_RELIC_JAR")}",
 			"-Dnewrelic.config.file=${project.projectDir}/newrelic/newrelic.yml",
 			// comment out line below for prod
+			// also update your NEW_RELIC_LICENSE_KEY as needed
 			"-Dnewrelic.environment=staging",
 			"-Dnewrelic.logfile=${project.projectDir}/newrelic/newrelic_agent.log",
 			"-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005"

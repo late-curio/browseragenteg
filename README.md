@@ -36,6 +36,10 @@ http://localhost:8080/auto?name=Bob
 
 Should be a script in header and footer.
 
+`View > Developer > Javascript Console`
+
+Verify there are no Javascript errors.
+
 ### Verify Browser Manual Injection
 
 Hit the endpoint that manually injects browser agent script to the JSP:
@@ -47,6 +51,10 @@ http://localhost:8080/manual?name=Sally
 Should be a script in header and footer.
 
 `<script type="text/javascript">window.NREUM...`
+
+`View > Developer > Javascript Console`
+
+Verify there are no Javascript errors.
 
 ### Verify Browser Injection Disabled
 
